@@ -1,38 +1,84 @@
+body {
+  background-color: #97D8C4; 
+  font-family: Arial, sans-serif; 
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  max-width: 600px;
+  margin: 0 auto; 
+  padding: 20px;
+}
+
+h1 {
+  color: #333; 
   text-align: center;
+  margin-bottom: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.TodoList {
+  background-color: #EFF2F1; 
+  border-radius: 8px; 
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* TodoItem styling */
+.TodoItem{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 5px;
+  border-bottom: 1px solid #2a2a2a;
+  justify-content: flex-end;
+}
+.TodoItem > span {
+  flex-grow: 1;
+}
+.TodoItem > button{
+  margin: 5px;
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+form{
+  display: flex;
+  gap: 5px;
+}
+input[type="text"] {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Button styling */
+button {
+  background-color: #4059AD;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s; 
+}
+
+button:hover {
+  background-color: #3c3c3c;
+}
+
+/* Delete button styling */
+.deleteButton {
+  background-color: #cc1b0e;
+}
+
+.deleteButton:hover {
+  background-color: #d32f2f;
 }
